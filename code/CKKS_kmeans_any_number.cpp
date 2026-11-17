@@ -1,37 +1,4 @@
-/**
- * ╔══════════════════════════════════════════════════════════════════════════════╗
- * ║   DIVIDE ET IMPERA ENCRYPTA                          by Dominik Prantl       ║
- * ║   Privacy-Preserving Homomorphic K-Means on Encrypted Satellite Imagery      ║
- * ╠══════════════════════════════════════════════════════════════════════════════╣
- * ║                                                                              ║
- * ║   CONTRIBUTIONS:                                                             ║
- * ║   • Train Strategy        — stable memory via wagon-based streaming          ║
- * ║   • Existence-Gating      — Correct clustering for arbitrary dataset sizes   ║
- * ║   • SIMD Vectorisation    — 128 pixels per ciphertext (Structure-of-Arrays)  ║
- * ║   • 6 Independent Chebyshev Sigmoid Comparisons (degree 21, κ=12)            ║
- * ║   • Chebyshev Division    — Paterson-Stockmeyer reciprocal (degree 25)       ║
- * ║   • Best Iteration Export — Auto-saves highest match-rate iteration          ║
- * ║                                                                              ║
- * ║   CRYPTOGRAPHIC PARAMETERS:                                                  ║
- * ║   • Ring dimension N = 2^17 = 131,072                                        ║
- * ║   • Multiplicative depth L = 55, Scaling modulus = 59 bit                    ║
- * ║   • log₂(Q) = 3305 bit ≤ 3523 bit (HE Standard, N=2^17)                      ║
- * ║   • Security: rop ≈ 2^136.7 (verified via Lattice Estimator [1])             ║
- * ║   • Security level: HEStd_128_classic                                        ║
- * ║                                                                              ║
- * ║   COMPATIBILITY:                                                             ║
- * ║   • OpenFHE v1.0.3                                                           ║
- * ║   • OpenFHE v1.4.1+ (cross-version validation, ~4x faster)                   ║
- * ║   • Requires: N=2^17 security patch in stdlatticeparms.cpp [2]               ║
- * ║                                                                              ║
- * ║   REFERENCES:                                                                ║
- * ║   [1] Albrecht et al. (2015), Lattice Estimator,                             ║
- * ║       https://github.com/malb/lattice-estimator                              ║
- * ║   [2] OpenFHE Forum Thread #405, GitHub Issue #147,                          ║
- * ║       https://openfhe.discourse.group/t/405                                  ║
- * ║                                                                              ║
- * ╚══════════════════════════════════════════════════════════════════════════════╝
- */
+
 
 #include "openfhe.h"
 #include <iostream>
