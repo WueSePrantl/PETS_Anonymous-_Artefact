@@ -1,25 +1,4 @@
-/**
- * ╔════════════════════════════════════════════════════════════════════════════╗
- * ║  HYBRID CKKS-FHEW K-MEANS  - FINAL PAPER VERSION by Dominik Prantl         ║
- * ╠════════════════════════════════════════════════════════════════════════════╣
- * ║  Hybrid CKKS/FHEW via PEGASUS Scheme Switching (PEGASUS, Lu et al.         ║
- * ║                                                                            ║
- * ║  CONTRIBUTIONS:                                                            ║
- * ║  • Train Strategy        — O(1) memory via wagon-based streaming           ║
- * ║  • Exact arg-min         — FHEW Boolean gates via PEGASUS [3]              ║
- * ║  • 3 Comparisons + 1-x   — Binary outputs enable complement identity       ║
- * ║  • Chebyshev Division    — Paterson-Stockmeyer reciprocal (degree 23)      ║
- * ║  • Existence-Gating      — Correct clustering for arbitrary dataset sizes  ║
- * ║                                                                            ║
- * ║  CRYPTOGRAPHIC PARAMETERS:                                                 ║
- * ║  • N=131072 (2^17), L=80, scale=43, log2(Q)=3500 <= 3523                   ║
- * ║  • FHEW: STD128 — 128-bit Boolean gate security                            ║
- * ║                                                                            ║
- * ║  • Best Iteration auto-export (highest match rate)                         ║
- * ║                                                                            ║
- * ║  • No modifications to OpenFHE source required                             ║
- * ╚════════════════════════════════════════════════════════════════════════════╝ 
- */
+
 
 #include "openfhe.h"
 #include "binfhecontext.h"
